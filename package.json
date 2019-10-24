@@ -1,64 +1,65 @@
 {
-	"name": "geteventstore-promise",
-	"version": "3.2.1",
-	"description": "GetEventStore client wrapper using promises",
-	"main": "index.js",
-	"scripts": {
-		"test": "cross-env NODE_ENV=test mocha --exit --require @babel/register tests/",
-		"test:docker": "cross-env NODE_ENV=test TEST_USE_DOCKER=true mocha --exit --require @babel/register tests/",
-		"coverage": "nyc yarn test:docker",
-		"build": "babel --delete-dir-on-start -d dist/ lib",
-		"install": "yarn build"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/RemoteMetering/geteventstore-promise.git"
-	},
-	"keywords": [
-		"node",
-		"client",
-		"event store",
-		"geteventstore",
-		"eventstore",
-		"promise"
-	],
-	"author": "Remote Metering Solutions Team",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/RemoteMetering/geteventstore-promise/issues"
-	},
-	"homepage": "https://github.com/RemoteMetering/geteventstore-promise",
-	"dependencies": {
-		"@babel/cli": "^7.6.2",
-		"@babel/core": "^7.6.2",
-		"@babel/plugin-transform-runtime": "^7.6.2",
-		"@babel/preset-env": "^7.6.2",
-		"@babel/register": "^7.6.2",
-		"babel-plugin-add-module-exports": "^1.0.2",
-		"@babel/runtime": "^7.6.2",
-		"axios": "^0.19.0",
-		"debug": "^4.1.1",
-		"generic-pool": "^3.7.1",
-		"node-eventstore-client": "^0.2.13",
-		"uuid": "^3.3.3"
-	},
-	"devDependencies": {
-		"cross-env": "^6.0.3",
-		"mocha": "^6.2.1",
-		"nyc": "^14.1.1"
-	},
-	"nyc": {
-		"reporter": [
-			"lcov",
-			"text",
-			"html"
-		],
-		"include": [
-			"lib/*"
-		],
-		"exclude": [
-			"lib/AggRoot.js"
-		],
-		"all": true
-	}
+  "name": "geteventstore-promise",
+  "version": "3.2.2",
+  "description": "GetEventStore client wrapper using promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha --exit --require @babel/register tests/",
+    "test:docker": "cross-env NODE_ENV=test TEST_USE_DOCKER=true mocha --exit --require @babel/register tests/",
+    "coverage": "nyc yarn test:docker",
+    "build": "babel --delete-dir-on-start -d dist/ lib",
+    "install": "yarn build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crensoft/geteventstore-promise.git"
+  },
+  "keywords": [
+    "node",
+    "client",
+    "event store",
+    "geteventstore",
+    "eventstore",
+    "promise"
+  ],
+  "author": "Crensoft",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crensoft/geteventstore-promise/issues"
+  },
+  "homepage": "https://github.com/crensoft/geteventstore-promise",
+  "dependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/register": "^7.6.2",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "@babel/runtime": "^7.6.2",
+    "axios": "^0.19.0",
+    "debug": "^4.1.1",
+    "generic-pool": "^3.7.1",
+    "node-eventstore-client": "^0.2.13",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "cross-env": "^6.0.3",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text",
+      "html"
+    ],
+    "include": [
+      "lib/*"
+    ],
+    "exclude": [
+      "lib/AggRoot.js"
+    ],
+    "all": true
+  },
+  "private": true
 }
